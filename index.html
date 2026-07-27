@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>АВ-ПРОСЧЁТ · AV пресейл-калькулятор</title>
+  <link rel="stylesheet" href="./src/styles.css" />
+  <link rel="stylesheet" href="./src/styles/welcomeIntro.css" />
+  <link rel="stylesheet" href="./src/styles/proposal.css" />
+  <link rel="stylesheet" href="./src/styles/print.css" />
+  <script>
+    // ВНЕШНЕЕ ХРАНИЛИЩЕ ПРАЙСОВ ПОСТАВЩИКОВ (облегчённая сборка).
+    // ЗАМЕНИТЕ URL ниже на адрес, где вы разместили папку public/data/suppliers.
+    // Требования к хранилищу: отдавать JSON по HTTPS и заголовок Access-Control-Allow-Origin.
+    // Примеры:
+    //   GitHub Pages:  https://ВАШ_ЛОГИН.github.io/avproschet-data/public/data/suppliers
+    //   jsDelivr:      https://cdn.jsdelivr.net/gh/ВАШ_ЛОГИН/avproschet-data@main/public/data/suppliers
+    //   Свой хостинг:  https://data.вашдомен.ru/suppliers
+    window.SUPPLIER_DATA_BASE = 'https://kirillp-bit.github.io/avproschet-data/public/data/suppliers';
+    // Версия прайсов для сброса кеша. Меняйте при обновлении данных.
+    window.SUPPLIER_DATA_VERSION = '20260727';
+  </script>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="module" src="./src/app/App.js"></script>
+</body>
+</html>
